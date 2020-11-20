@@ -4,8 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/others"  # local
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://postgres:postgres@postgres:5432"  # server
-# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql:///still-harbor-31837"  # server
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://postgres:postgres@postgres:5432"  # server
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql:///still-harbor-31837"  # server
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
