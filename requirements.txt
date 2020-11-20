@@ -4,3 +4,5 @@ Flask-SQLAlchemy
 psycopg2
 flask-heroku
 psycopg2-binary
+flask_user
+email_validator
