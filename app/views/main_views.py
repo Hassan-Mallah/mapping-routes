@@ -1,4 +1,3 @@
-import app
 from app import db
 from flask import Blueprint, redirect, render_template
 
