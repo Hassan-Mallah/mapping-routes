@@ -14,14 +14,11 @@ def create_app(extra_config_settings={}):
     from .views import register_blueprints
     register_blueprints(app)
 
+    from .models.tables import User
+    user_manager = UserManager(app, db, User)
+
     with app.app_context():
         db.drop_all()
         db.create_all()
-
-    from .models.tables import User
-
-    user_manager = UserManager(app, db, User)
-
-
 
     return app
