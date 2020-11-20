@@ -1,4 +1,4 @@
-from app import db
+from flask_app import db
 from flask import Blueprint, redirect, render_template
 
 main_blueprint = Blueprint('main', __name__, url_prefix='')
