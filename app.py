@@ -1,5 +1,7 @@
 # app.py
-from flask import Flask, request, jsonify
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
 app = Flask(__name__)
 
 # A welcome message to test our server
