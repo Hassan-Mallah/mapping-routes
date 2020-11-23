@@ -5,7 +5,6 @@ from flask_user import UserManager
 
 db = SQLAlchemy()
 
-
 def create_app(extra_config_settings={}):
     app = Flask(__name__)
     app.config.from_object('flask_app.settings')
