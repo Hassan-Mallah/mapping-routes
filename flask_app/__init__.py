@@ -22,6 +22,9 @@ def create_app(extra_config_settings={}):
             db.drop_all()
         except:
             print('empty DB')
-        db.create_all()
+        try:
+            db.create_all()
+        except:
+            print('DB up-to-date')
 
     return app
