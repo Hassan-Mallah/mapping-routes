@@ -1,4 +1,5 @@
 # mapping-routes
+Web application to create random routes for different users.
 
 Demo Version: https://still-harbor-31837.herokuapp.com/
 
@@ -18,3 +19,8 @@ Installation:
     $ python app.py
     ```
 - happy browsing :)
+
+DB schema:
+--------------------------
+
+![Alt text](https://github.com/Hassan-Mallah/mapping-routes/blob/master/db_schema.png)

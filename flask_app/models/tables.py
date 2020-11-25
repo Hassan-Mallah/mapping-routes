@@ -13,6 +13,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(100), nullable=True, unique=True)
     password = db.Column(db.String(255), nullable=False, server_default='')
     active = db.Column(db.Boolean(), nullable=False, server_default='0')
+    # ORM relationship
     routes = relationship("Route", back_populates="user")
 
 
@@ -21,6 +22,7 @@ class Route(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    # ORM relationship
     user = relationship("User", backref="route", lazy=True)
     points = relationship("Point", back_populates="route")
 
@@ -29,9 +31,10 @@ class Point(db.Model):
     __tablename__ = 'point'
     id = db.Column(db.Integer, primary_key=True)
     route_id = db.Column(db.Integer, db.ForeignKey('route.id'), nullable=False)
-    route = relationship("Route", back_populates="points")
     coordinates_x = db.Column(db.Float)
     coordinates_y = db.Column(db.Float)
+    # ORM relationship
+    route = relationship("Route", back_populates="points")
 
 
 
