@@ -21,14 +21,14 @@ def index():
 
 
 @main_blueprint.route('/all_routes')
-# @login_required
+@login_required
 def all_routes():
     users = all_records(User)
     return render_template('all_routes.html', users=users)
 
 
 @main_blueprint.route('route_view/<int:id>', methods=["GET"])
-# @login_required
+@login_required
 def route_view(id):
     route = one_record(Route, id=id)
     return render_template('route_view.html', route=route)
