@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="container">
+        <h3>Name: {{ route.name }} - User: {{ route.user.username }}</h3>
+        {% for point in route.points %}
+        '{{ point.coordinates_x }}' -  '{{ point.coordinates_y }}' -->
+        {% endfor %}
+        The End :)
+    </div>
+
+</div>
+{% endblock %}

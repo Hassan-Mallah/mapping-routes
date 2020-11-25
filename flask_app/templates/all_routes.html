@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    {% for user in users %}
+    <div class='thumbnail'>
+        <h3>User: {{ user.username }}</h3>
+        Routes:
+        {% for route in user.routes %}
+            <a href="route_view/{{route.id}}">{{ route.name }}</a> |
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

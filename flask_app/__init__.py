@@ -17,11 +17,11 @@ def create_app(extra_config_settings={}):
     user_manager = UserManager(app, db, User)
 
     with app.app_context():
-        try:
-            print('drop_all')
-            db.drop_all()
-        except:
-            print('empty DB')
+        # try:
+        #     print('drop_all')
+        #     db.drop_all()
+        # except:
+        #     print('empty DB')
         try:
             print('create_all')
             db.create_all()

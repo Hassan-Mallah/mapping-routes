@@ -8,6 +8,6 @@ SQLALCHEMY_TRACK_MODIFICATIONS = True
 SECRET_KEY = secrets.token_urlsafe(16)
 
 # Flask-User settings
-USER_APP_NAME = 'Flask-User starter app'
+USER_APP_NAME = 'Mapping Routes'
 USER_ENABLE_EMAIL = False  # Disable email authentication
 USER_ENABLE_USERNAME = True  # Enable username authentication

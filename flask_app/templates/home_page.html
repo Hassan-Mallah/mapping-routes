@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row">
+        <form action="" method="POST">
+            <label>New Route</label>
+            <div class="form-row">
+                <div class="col-md-3 mb-2">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name" id="name" required>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <label for="amount">Amount of Points</label>
+                    <input type="number" min="1" max="100" class="form-control" name="amount" id="amount" required>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <br>
+                    <button class="btn btn-primary" type="submit">Create New Route</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<br>
+<br>
+{% endblock %}
