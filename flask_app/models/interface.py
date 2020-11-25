@@ -1,10 +1,10 @@
 from flask_app.models.tables import session, Route, Point
+import random
 
 
 # create route based on name, amount, user_id
 def create_route(name, amount, user_id):
-    import random
-
+    # create random coordinates
     route = create(Route, name=name, user_id=user_id)
     coords = [(float((random.random() * 180.0)) - 90, float((random.random() * 180.0)) - 180) for _ in range(int(amount))]
 
