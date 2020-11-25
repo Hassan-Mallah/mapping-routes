@@ -7,6 +7,7 @@ from flask_app.models.tables import Route, User
 main_blueprint = Blueprint('main', __name__, url_prefix='')
 
 
+# create a new route + home page
 @main_blueprint.route('/', methods=["GET", "POST"])
 @login_required
 def index():
@@ -20,6 +21,7 @@ def index():
     return render_template('home_page.html')
 
 
+# show all routes
 @main_blueprint.route('/all_routes')
 @login_required
 def all_routes():
@@ -27,6 +29,7 @@ def all_routes():
     return render_template('all_routes.html', users=users)
 
 
+# show a route according to id
 @main_blueprint.route('route_view/<int:id>', methods=["GET"])
 @login_required
 def route_view(id):
@@ -34,6 +37,7 @@ def route_view(id):
     return render_template('route_view.html', route=route)
 
 
+# show routes for current user
 @main_blueprint.route('user_routes', methods=["GET"])
 @login_required
 def user_routes():

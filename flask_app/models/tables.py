@@ -12,10 +12,8 @@ class User(db.Model, UserMixin):
     # User authentication information (required for Flask-User)
     username = db.Column(db.String(100), nullable=True, unique=True)
     password = db.Column(db.String(255), nullable=False, server_default='')
-    # reset_password_token = db.Column(db.String(100), nullable=False, server_default='')
     active = db.Column(db.Boolean(), nullable=False, server_default='0')
     routes = relationship("Route", back_populates="user")
-
 
 
 class Route(db.Model):

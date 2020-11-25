@@ -2,7 +2,6 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_user import UserManager
 
-
 db = SQLAlchemy()
 
 def create_app(extra_config_settings={}):
@@ -17,13 +16,7 @@ def create_app(extra_config_settings={}):
     user_manager = UserManager(app, db, User)
 
     with app.app_context():
-        # try:
-        #     print('drop_all')
-        #     db.drop_all()
-        # except:
-        #     print('empty DB')
         try:
-            print('create_all')
             db.create_all()
         except:
             print('DB up-to-date')

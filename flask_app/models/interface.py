@@ -1,7 +1,7 @@
-from flask_app import db
 from flask_app.models.tables import session, Route, Point
 
 
+# create route based on name, amount, user_id
 def create_route(name, amount, user_id):
     import random
 
