@@ -23,4 +23,4 @@ Installation:
 DB schema:
 --------------------------
 
-![Alt text](https://github.com/Hassan-Mallah/mapping-routes/blob/master/db_schema.png)
+![Alt text](https://raw.githubusercontent.com/Hassan-Mallah/mapping-routes/main/db_schema.png)
